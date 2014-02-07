@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>转-javascript正则表达式 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="og:type" content="blog">
+<meta name="og:title" content="转-javascript正则表达式">
+<meta name="og:url" content="http://yoursite.com/2014/02/07/js-regexp/">
+<meta name="og:image">
+<meta name="og:site_name" content="Hexo">
+<meta name="og:description" content="正则表达式就是一个用来描述字符模式的对象。它被用来在文本中执行模式匹配(pattern-matching)以及”查找-替换”(search-and-replace)的任务。javascript中正则的风格类似Perl中正则的风格。
+
+创建正则表达式
+var reg = new RegExp(pattern,modifiers);
+或
+var reg = /pattern/modifiers;mod">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js-regexp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/02/07/js-regexp/" class="article-date">
+  <time datetime="2014-02-07T12:40:15.000Z" itemprop="datePublished">Feb 7 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      转-javascript正则表达式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>正则表达式就是一个用来描述字符模式的对象。它被用来在文本中执行模式匹配(pattern-matching)以及”查找-替换”(search-and-replace)的任务。javascript中正则的风格类似Perl中正则的风格。
+<a id="more"></a></p>
+<h2 id="-">创建正则表达式</h2>
+<p><code>var reg = new RegExp(pattern,modifiers);</code>
+或
+<code>var reg = /pattern/modifiers;</code><br>modifiers包括</p>
+<ul>
+<li><p>g : 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）
+  如  </p>
+<figure class="highlight 'Hey,"><figcaption><span>Is this all there Is '.replace(/Is/g, 'is');//替换某字符串中所有的Is为is</span></figcaption><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> 
+</pre></td></tr></table></figure>
+</li>
+<li><p>i : 执行对大小写不敏感的匹配</p>
+</li>
+<li>m : 执行多行匹配，具体见<a href="http://javascript.info/tutorial/ahchors-and-multiline-mode" target="_blank">这里</a><br>ps 新建一正则时可多个模式，如 <code>/hEllO/ig</code></li>
+</ul>
+<h2 id="javascript-">JavaScript正则表达式对象的常用方法</h2>
+<ul>
+<li><p>.test()。该方法对一个字符串进行匹配。并根据匹配结果返回true或false。例如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="regexp">/e/</span>.test(<span class="string">'The best things in life are free'</span>); <span class="regexp">//</span><span class="literal">true</span>
+</pre></td></tr></table></figure>
+</li>
+<li><p>.exec()。该方法将对一个字符串进行匹配。并返回第一个匹配项目。例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>/e/.exec(<span class="string">'The best things in life are free'</span>); <span class="regexp">//</span> [<span class="string">"e"</span>]
+</pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>在字符串方法中，有<code>match</code>,与<code>exec</code>类似。如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="string">'The best things in life are free'</span>.match(<span class="regexp">/e/</span>); <span class="regexp">//</span>[<span class="string">"e"</span>]
+</pre></td></tr></table></figure>
+
+<h2 id="-">正则表达式中的元字符</h2>
+<blockquote>
+<p>正则表达式中的元字符是用来替代一类具有相同属性的字符的特殊字符，它也可以被称为字符类(character class)。 </p>
+</blockquote>
+<ul>
+<li>.   查找单个字符，除了换行和行结束符。</li>
+<li>\w  查找单词字符（字母、数字以及下划线”_”）。</li>
+<li>\W  查找非单词字符。</li>
+<li>\d  查找数字。</li>
+<li>\D  查找非数字字符。</li>
+<li>\s  查找空白字符。</li>
+<li>\S  查找非空白字符。</li>
+<li>\b  匹配单词边界。</li>
+<li>\B  匹配非单词边界。</li>
+<li>\0  查找 NUL 字符。</li>
+<li>\n  查找换行符。</li>
+<li>\f  查找换页符。</li>
+<li>\r  查找回车符。</li>
+<li>\t  查找制表符。</li>
+<li>\v  查找垂直制表符。</li>
+<li>\xxx    查找以八进制数 xxx 规定的字符。</li>
+<li>\xdd    查找以十六进制数 dd 规定的字符。</li>
+<li>\uxxxx  查找以十六进制数 xxxx 规定的 Unicode 字符。</li>
+</ul>
+<h2 id="-">正则表达式中的括号</h2>
+<h3 id="-">大括号 ()</h3>
+<p>进行分组。好比email地址，我们就可以将它分为</p>
+<ol>
+<li>@前面的部分；</li>
+<li>@后面’.’之前的部分；</li>
+<li>’.’之后的部分；
+如果要匹配所有gamil邮箱中@前的用户名中带有jack的替换为joel<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="string">'iamjack007@gmail.com'</span>.replace(<span class="regexp">/^(\w*)(jack)(\w*)@gmail\.com$/</span>, <span class="string">'$1joel$3@gmail.com'</span>);  <span class="regexp">//</span><span class="string">"iamjoel007@gmail.com"</span>
+</pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>这种类似于模块化的思想，不仅使我们一次可以专注于查找其中的一个小部分，也可以让我们在后面可以轻松的替换其中的某个部分，而不需要纠结于“牵一发而动全身”的痛苦。</p>
+<h3 id="-">方括号 []</h3>
+<p>用于查找某个范围内的字符</p>
+<ul>
+<li>[abc]   查找方括号之间的任何字符。</li>
+<li>[^abc]  查找任何不在方括号之间的字符。</li>
+<li>[0-9]   查找任何从 0 至 9 的数字。</li>
+<li>[a-z]   查找任何从小写 a 到小写 z 的字符。</li>
+<li>[A-Z]   查找任何从大写 A 到大写 Z 的字符。</li>
+<li>[A-z]   查找任何从大写 A 到小写 z 的字符。</li>
+<li>[adgk]  查找方括号内的任何字符。</li>
+<li>[^adgk] 查找不在方括号内的任何字符。</li>
+</ul>
+<h2 id="-">量词</h2>
+<p>匹配多个。如匹配3个数字可用正则<code>/\d{3}/</code>。</p>
+<ul>
+<li>n+  匹配任何包含至少一个 n 的字符串。</li>
+<li>n*  匹配任何包含零个或多个 n 的字符串。</li>
+<li>n?  匹配任何包含零个或一个 n 的字符串。</li>
+<li>n{X}    匹配包含 X 个 n 的序列的字符串。</li>
+<li>n{X,Y}  匹配包含 X 或 Y 个 n 的序列的字符串。</li>
+<li>n{X,}   匹配包含至少 X 个 n 的序列的字符串。</li>
+<li>n$  匹配任何结尾为 n 的字符串。</li>
+<li>^n  匹配任何开头为 n 的字符串。</li>
+<li>?=n     匹配任何其后紧接指定字符串 n 的字符串。</li>
+<li>?!n     匹配任何其后没有紧接指定字符串 n 的字符串。</li>
+</ul>
+<h2 id="-">习题</h2>
+<ol>
+<li>在字符串”1.5 0 123 -7 -0.4”里面匹配带小数点的数，无论是正的还是负的。</li>
+<li>在字符串”1.5 0 123”中匹配数字([1.5,0,123])，无论是整数还是小数。</li>
+<li><a href="http://javascript.info/tutorial/practice" target="_blank">更多习题</a></li>
+</ol>
+<hr>
+<h2 id="-">进阶</h2>
+<h2 id="-">贪婪和非贪婪模式</h2>
+<p>默认正则匹配是贪婪模式的，即前面的正则匹配尽可能多的。如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>/(\d+)(\d+)/.exec(<span class="string">'12345'</span>);<span class="regexp">//</span>结果[<span class="string">"12345"</span>, <span class="string">"1234"</span>, <span class="string">"5"</span>]
+</pre></td></tr></table></figure>
+
+<p>开启非贪婪模式,量词后面加<code>?</code>
+如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>/(\d+?)(\d+)/.exec(<span class="string">'12345'</span>);<span class="regexp">//</span>结果[<span class="string">"12345"</span>, <span class="string">"1"</span>, <span class="string">"2345"</span>]
+</pre></td></tr></table></figure>
+
+<p>更详细的的解释，点<a href="http://javascript.info/tutorial/greedy-and-lazy" target="_blank">这里</a></p>
+<h2 id="-">非捕获性分组</h2>
+<p>在括号内容以<code>?:</code>开头。如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="regexp">/(?:\d+)\d+/</span>.exec(<span class="string">'123'</span>);<span class="regexp">//</span> 结果 [<span class="string">"123"</span>]
+</pre></td></tr></table></figure>
+
+<h2 id="-">匹配</h2>
+<p>Lookaround 是 向前匹配(Lookahead) 和 向后匹配(Lookbehind) 的统称。
+向前匹配</p>
+<blockquote>
+<p>包括向前正向匹配（Positive Lookahead）和向前负向匹配（Negative Lookahead），语法是 <code>?=</code> 和 <code>?!</code>。<br>前正向匹配：匹配任何其后紧接指定字符串 n 的字符串。<br>向前负向匹配：匹配任何其后没有紧接指定字符串 n 的字符串。</p>
+</blockquote>
+<p>类似的还有向后匹配。<br>在javascript目前只能使用 Lookahead，还无法使用 Lookbehind。</p>
+<p>Lookaround 参考教程：<a href="http://www.regular-expressions.info/lookaround.html" target="_blank">http://www.regular-expressions.info/lookaround.html</a></p>
+<h2 id="-http-xregexp-com-"><a href="http://xregexp.com/" target="_blank">正则拓展库</a></h2>
+<p><a href="http://xregexp.com/" target="_blank">xregexp</a>特性</p>
+<ol>
+<li>支持所有的ES5的正则的语法。</li>
+<li>兼容 Explorer 5.5+, Firefox 1.5+, Chrome, Safari 3+, and Opera 11+。在nodejs上也可以使用。</li>
+<li>比原生正则可读性高。</li>
+<li>比原生正则易用。</li>
+</ol>
+<h2 id="-">更多资源</h2>
+<ul>
+<li><a href="http://javascript.info/tutorial/regular-expressions-javascript" target="_blank">正则简明参考</a></li>
+</ul>
+<h2 id="-">参考</h2>
+<ul>
+<li><a href="http://www.w3school.com.cn/js/jsref_obj_regexp.asp" target="_blank">http://www.w3school.com.cn/js/jsref_obj_regexp.asp</a></li>
+<li><a href="http://www.html-js.com/article/A-day-to-learn-JavaScript-JavaScript-regular-expressions-a" target="_blank">http://www.html-js.com/article/A-day-to-learn-JavaScript-JavaScript-regular-expressions-a</a></li>
+<li><a href="http://javascript.info/tutorial/regular-expressions-javascript" target="_blank">http://javascript.info/tutorial/regular-expressions-javascript</a></li>
+<li><a href="https://github.com/lifesinger/lifesinger.github.com/issues/162#wechat_redirect" target="_blank">https://github.com/lifesinger/lifesinger.github.com/issues/162#wechat_redirect</a></li>
+</ul>
+<h2 id="-">习题答案</h2>
+<ol>
+<li>&#39;1.5 0 123 -7 -0.4&#39;.match(/(-?\d+.\d+)/g)</li>
+<li>&#39;1.5 0 123&#39;.match(/(\d+.?\d+)|0/g)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2014/02/07/js-regexp/" data-id="d5updhrywntbam9o" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02">February 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/02/07/js-regexp/">转-javascript正则表达式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 John Doe<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+  </div>
+</body>
+</html>
