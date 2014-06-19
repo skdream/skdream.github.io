@@ -1,0 +1,341 @@
+title: Scott Hanselman 的 2014 年软件推荐（授权翻译）
+date: 2014-02-13 23:07:15
+tags: 软件推荐
+---
+
+
+每个人都会收集工具软件，对诸位来说，他们都不可或缺。而你接下来要看到的，就是我收藏的工具。对我而言，它们都有其用处，它们都能节省时间，都有专门的目的。我每周都会使用它们，它们已经和我的生活密不可分。在这些工具中大多数都是免费的，剩下的那些都值得试用，和购买。
+<!-- more -->
+这张列表整合了我在 2003、2005、2006、2007、2009 和 2011 年整理的软件列表。我在今年又做了不少更新，来发布 2014 版。在整理软件这一行我已经干了 10 年了。
+
+表中所有的软件我都很喜欢，也一直在使用——我没用过的东西是不会出现在这里的。这篇文章绝不是软文，这里所有的软件都是我自己找到的，没有人上门塞钱给我让我把它列出来。
+
+个人建议：如果你说第一次看到这个列表，建议订阅我的博客，顺便收听我的 Podcatst 和 新闻组。
+若想获得最新的 Hanselman 推荐列表，请访问 Scott Hanselman's 2014 Ultimate Developer and Power Users Tool List for Windows。欢迎在本文下评论并指正错漏。2014 年新增的项目用正红色标出，此次修订增加了许多内容并修复了不少错误。
+
+译者注：此篇翻译已经过 Scott Hanselman 本人授权，谢绝以任何形式转载。若希望传播此文请链接至 *http://hanselman.com/tools和 中文地址。谢谢合作。
+十大改变生活的神器
+
+"Productivity is being able to do things that you were never able to do before." - Franz Kafka
+Chocolatey - 名字很奇特，但它可是 Windows 上的 apt-get。一旦拥有，别无所求。现在我想装软件的时候，会首先想到它而不是 Google。刚刚我还在用 'cinst filezilla' 和 'cinst winscp' 来安装我想要的东西呢。想想看，利用它你就可以把「装机」变成一个极其简单的事情。不过自己写脚本还是太复杂，对于装机，你应该用……
+Boxstarter - Matt Wrock 利用 Chocolatey 和 Nuget 构建了这个神奇的东西。它可以大幅简化你在更新电脑时候的工作，也可以在远程机器或者虚拟机上进行无人值守的环境部署。
+TeraCopy - 大多数时候我都用 Windows 8.1 自带的复制，不过如果我真要搬运一大堆东西的话我会用 TeraCopy。正如其名它做的事情就是复制，而且在速度上，无出其右。
+NimbleText - 正则表达式很难写，我也学不会。NumbleText 则可以让你轻松地处理大量文字。
+GOW Gnu on Windows - 当你只需要 *nix 工具的时候装 Cygwin 未免小题大做。 Gow 就是 130 个编译成原生 Windows EXE 的 Unix 命令行工具，仅此而已。
+F.lux - 说实话，一开始我觉得这玩意挺蠢的，但是再用完几天之后我就收回了那些想法。F.lux 会随着每天时间的变化来调整显示器色温，在晚上就能让显示器色调更暖。对于一个整天对着三个巨屏的人来说这是福利。自从用来 F.lux 我再也不头痛了，眼酸的症状也缓解了很多。试试看，你会喜欢上的。
+AutoHotKey - 这个开源小东西碉堡了。你可以吧复杂的工作变成简单的快捷键，非程序员的变成利器。它可以用极其简单的方法来自动化 Windows 操作，堪称 Windows 平台的 Applescript。
+如果你写英语的话千万别错过 "AuftoCorrect for English" 脚本。它可以在几乎所有的 Windows 程序里纠正超过 4700 种拼写错误。是的，所有程序。它只是 AHK 强大能力的 冰山一角。
+别忘了Window Pad - 超赞的好东西，完全是用 AHK 写成的！
+Paint.NET - Windows 应该 内置 的画图程序，基于 .NET 平台，用免费的价格换取 Photoshop 80% 的能力。目前 Paint.NET 正在积极开发它的第四版！
+7-Zip - 不用再关心其他的压缩软件了。7z 已经胜利，它能提供比 zip 更高的压缩比，更好的 Windows 整合性，而且也能打开 TAR、ISO、RAR 和 CAB。
+DropBox - 现在的云存储多到爆。Skydrive、DropBox 和 Google Drive，等等等等，不一而足。我现在回到了 Dropbox 的怀抱，因为它们处理大量文件效果更好，可以提供选择性同步，而且在每个平台都有客户端。赶快选个云盘吧，放那里总是更安心的，不是么？
+Windows Live Writer - 如果你有博客，那它是胃液素神器。它还有一个不错的 插件库。它应该停止更新了，但生命力依旧旺盛。
+你不知道的 Windows 8/8.1 特性
+
+"If you don't pay appropriate attention to what has your attention, it will take more of your attention than it deserves. " - David Allen
+现在，我把我所有的电脑都升级成 Windows 8.1 了。我很喜欢它。只要愿意花几分钟了解下快捷键你就能爽到飞起。为此，我还录制了一些 Win 8 使用的小窍门。快去看看呀！即使Windows 8 可能会让你感觉不太适应，不过这不是严重的问题。
+
+除此之外我要表示，Windows 8/8.1 内置了许多东西，让你能少装很多软件。实际上 Windows 8.1 内置了杀毒、内置了防火墙、内置了分区管理，虚拟光驱，和清理程序，以及一个启动项管理工具。除此之外，Windows 8 支持多显示器里显示任务栏，来减省掉一些软件；甚至还内置了虚拟机。这些都是内置的。
+
+这里列出的就是那些你可能还不知道的特性：
+
+磁盘清理 - 经过改进之后它能够从硬盘里榨取更多的空间
+可靠性历史记录 - 在开始屏幕里，输入「可靠性」，就可以看到「查看可靠性历史记录」了。你将可以看到一张漂亮的图表，显示出你的机器状况如何，哪些程序工作，哪些不能。通过它我就能发现给我造成问题的实际上是驱动而不是 Windows 本身。如果你的电脑有问题它是很好用的工具。
+显示器颜色校准 - 另一个以前要装，现在则内置的工具。输入「校准」然后就能把显示器的颜色调整准确。如果你要画图的话，它就很重要了。
+布骤记录器 - 从 Windows 7 开始内置。我母亲就用它记录遇到的问题。
+Hyper-V 虚拟机 - Windows 8 Pro 内置了虚拟功能。搜索 Hyper-V 就能发现一个完整的虚拟机宿主，可以几乎全速运行 Ubuntu 和旧版的 Windows。
+注：你的 CPU 要支持二级地址转换（SLAT）才能运行 Hyper-V
+任务计划 - 很旧，但是我一直忘记的东西。如果你想定时运行，就用它。搜索「任务」。
+内存诊断 - 内存有问题？Windows 内置了内存测试工具！搜索「内存」。
+资源监视器 - 搜索「资源」就能看透那些软件究竟占据了多少东西。我用它挖出了流氓软件。
+文件历史 - 就像时间机器那样。我现在每小时备份一次，它帮我找到了我几个月前删掉的文件，不止一回。
+存储空间 - 把几个硬盘合并成一个巨大的分区。事实上「文件历史」备份的数据就被我丢在数个硬盘构成的存储池里。它们都是内建功能。
+OblyTile - 这个不是内置功能了，它干一件事：把桌面程序创建的 Tile 替换成你自定的。此外你还可以利用它往开始屏幕钉任何东西，包括文件夹、命令快捷方式（比如关机 -_-），让你的开始屏幕变得更好看，更好用。
+Windows 8 商店应用
+
+"If you spend too much time thinking about a thing, you’ll never get it done." - Bruce Lee
+商店正在逐渐发展。下面是我所用的一些商店应用：
+
+OneNote - 没有桌面版那么强大，不过在成触屏上更好用。有笔最好。
+Google for Windows 8 - 这个 Google 应用只是他们服务的简单包装，不过它自带的语音识别非常优秀。就算是为了开口问它「Oprah 有多大」，你也值得装。
+Bing Translator - 最厉害的是他的照片翻译：只要把摄像头对准你想要翻译的东西，译文就会直接叠加在照片上。
+
+Comixology - 我超喜欢漫画。Guided View 在笔记本和平板上是漫画神器，我真心希望 Comixology 继续改进这个 app。
+Fresh Paint - 绝对是展示你自己的好工具，可以满足艺术家的可可需要。它的混色功能实在很赞。你可以用鼠标、手指或者笔来绘画。不管专业还是业余人士都可以使用。
+Movie Moments - 制作 60 秒短片的好工具，支持字幕和特效。
+TuneIn Radio - 作业用电台播放器。
+TimeManage.me - Windows 8 商店中最好的番茄工作法专用定时器。简单，管用。
+Modern Delicious - 我已经用 Delicious 管理我的书签很久了。这个 Win8 应用可以让平板 app 和 Share Charm 支持 Delicious，这样，从 Modern ID 和其他 app 中就能方便地分析链接了。
+Music Maker Jam - 强大管用的音乐创造工具，支持导出 MP3。
+Mint Finance Manager - 带来了 Mint 财务服务的所有好处，界面美观，还有很漂亮的 Live Tile。
+（.NET）程序员的日常
+
+"Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law." - Douglas Hofstadter
+PowerShell - 用命令行支配 .NET、WMI 和 COM 的强大力量吧。Powershell 和其他 Shell 并不相似，学习曲线可能会有些陡峭，然而就像学跳舞一样，当你真正开始用的时候……哇呼！我现在用 这个 PowerShell Prompt。顺便一说，Powershell win7 自带。
+我同时建议你装完 Powershell 之后立马安装 PowerTab 来获得华丽的自动补全。
+然后，安装 PowerShell Community Extensions 获取大量有用的工具。
+喜欢图形界面？试试 PowerGUI 吧，免费的。
+LINQPad - 使用此工具你可以借助 LINQ 查询数据库，有助于学习 LINQ 或者写简短的 C#/VB 程序。免费的好东西。除了 LINQPAD，Jim Wooley 还制作了许多其他的 LINQ 工具。
+MarkdownPad 2 - 长久以来 Windows 上一直没有好用的 Markdown 编辑器，直到 MarkdownPad 2 出来一统天下。
+scriptcs - 从 Chocolatey 安装后你就可以不用编译执行 C# 代码了。写一个 .csx 文件，完事。绝对是 2014 年值得关注的项目之一。
+Microsoft Web Platform Installer - 当我想把一台新机器变成开发机的时候我就会打开 http://www.microsoft.com/web/，然后安装 SQL Express、Visual Studio Express 以及成堆的开发工具。除此之外它还可以方便地安装 PHP 与 .NET 中的开源库。
+Web Essentials for Visual Studio - 它是如此的 Essential，事实上，它是我们试验新功能的游乐场，那些得以毕业的东西都会被 Mads Kristensen 放进下一版的 Visual Studio 里。它是开源的！
+
+GitHub for Windows - 最好的 WPF 程序，没有之一，而且不仅可以访问 Github，它还是一个优秀的 Git 客户端。提示：在版本库界面按 ~ 可以打开自带 Posh-Git 的 Powershell 控制台。
+同样值得注意的是 SourceTree，它同时支持 Git 和 Hg 而且非常干净。告诉那些 Git/Hg 用家吧。
+JetBrains dotPeek .NET decompiler - .NET Reflector 收费之后涌现出了许多免费的替代品，JetBrains dotPeek 就是。你可以利用它深挖 .NET 的细节，从 .NET 1.0 到 4.0 都支持。
+想要开源的？试试 ILSpy，它包含在 SharpDevelop 里。
+二选一：Notepad2 或 Sublime Text - 这两位竞争者让编辑器市场变得更加多样化。我用 Notepad2 作为记事本的替代品，而 Sublime 则填补了 IDE 和纯编辑器之间的空白（尽管 Sublime Text 离 IDE 已经很接近了）。它们都值得拥有！别忘了 Sublime 的 Package Control。
+CodeRush(以及 DxCore) - 很显然已经有人注意到我喜欢 CodeRush。不过也许你们还不知道 CodeRush 的秘密：那些很牛叉的功能是构建在 DxCore 这个插件框架之上的，它可以大大提高 VS 的扩展能力。
+在 13.2 版里 CodeRush 增加了一个新功能，叫做 Unit Test Builder，非常的赞。
+ReSharper - 不论是接受大项目，还是使用 TDD 工作流，Resharper 都是产品中的佼佼者。试试看吧。
+ZoomIt - 要做演示先得让然看见东西，不是吗？Zoomit 是一个优雅而且高效的工具，在我心中它是最好的放大镜。相信我吧，我试过好几中东西，包括系统自带的，都没有 Zoomit 那么有效。
+Fiddler - 简单、清楚、强力，HTTP 调试代理的不二之选。还支持 SSL 分析。
+Mite2 - 能让你在桌面上预览移动网页。开发移动网站的必备之选。
+BrowserStack - Browser Stack 是一个云服务，它可以模拟多种浏览器下的页面显示效果，非常棒的选择。对了它还能和 Visual Studio 集成。
+WinMerge 或 BeyondCompare - 我个人是用 BeyondCompare 的，不过 WinMerge 最近改进迅猛。作为开源项目，它可以比较并快速合并你手上的代码。
+Perforce Visual Merge 也是不错的免费工具，还可以比较图片！
+Postman - Chrome 里的 HTTP/REST 客户端，Web 服务专用神器。
+想要服务器端的解决方案？看看 https://www.runscope.com。
+NirSoft Utilities Collection - NirSoft 做的每一样东西都值得一看。在这之中我最喜欢的是 MyUninstaller，卸载器的替代，以及 WhoIsThisDomain。
+希望你也能检查下 ZipInstaller，它能「安装」那些绿色软件，包括创建桌面图标，增加卸载器等。（译者：我怎么才发现这货。）
+喜欢用 Ctrl-滚轮来调整文字大小吗？现在借助 Volumouse 就能用滚轮来调整音量啦。这很科学。
+BugShooting - BugShooting 的目的很单一，截图然后发给开发者叫他们修 bug。你总遇到过软件有问题结果救助无门的情况吧？
+WinCheat - 不是游戏修改器，WinCheat 是一个 Spy++ 那样能深入分析 PE 文件和 Win32 窗口化子系统的工具。作为开发者你使用他们会很频繁的。
+Telerik Code Converter - 易 VB 到 C#，或者反过来。
+Kaxaml - 最早，也是最优质的 XAML 编辑器，WPF/Silverlight 程序员必备。
+NuGet - 如果你说 .NET 程序员的话你应该使用 NuGet，它是一个久经考验的 .NET 包管理器。
+NuGet Package Explorer - 这个工具可以帮你打开、测试 NuGet 包，搜索 NuGet 目录，以及帮你发布那些包。它通过 Click Once 部署。
+MSBuildShellExtension - 系统应该内置的功能，在 Explorer 里右击 .NET 项目就可以直接构建之。
+FireBug - 它就像透视机一样，深入审视 HTML、CSS 和 JavaScript，并实时修改他们。绝对的必要之物。
+YSlow for FireBug - 除了包含 JSLint，这个扩展更能通过十三个不同的方面帮你优化网站速度。这些优化也许不全部适用，不过不妨碍 YSlow 成为优秀的工具。
+YSlow for Chrome - Chrome 版的 YSlow，功能不变。
+利用 Firepicker 扩展 Firebug，帮助你管理 CSS 样式。
+WebDeveloper- 这一个工具就够让你切换到 Firefox/Chrome 了。这东西集成了几十个有用的功能，用来协助 ASP.NET/HTML 开发。如果你是样式农的话，它携带的 CSS 编辑功能能让你爽到飞起。
+CodePaste.NET - 分享你的代码
+当然 Pastie 和 Gist 也值得一试。
+Jabbr - 新晋 IRC 替代品。
+NCrunch - .NET 平台上的自动化测试，在你编辑代码的时候就运行测试，并将结果插入 Visual Studio 中。习惯持续集成了吗？试试持续测试吧。
+Pixie - 简单，可爱，便携的取色器。
+Siren of Shame - 有人改的代码让你的项目编译不通过？那就给他好看！你必须要 Siren of Shame。
+NDepend - 它可以分析 .NET 项目里的依存关系，并显示在 TreeMap 里。
+NCover - .NET 代码覆盖工具中的佼佼者，不论深度还是广度。对学生/教育用户免费。
+Query Express - 哇塞，一个能用的查询分析器，不用安装，快的令人发指，只有 100K 还特么不要钱！这是异变！这是异变！
+PostSharp - 让你的代码在 AOP 面前依旧保持简洁。将重复性的部分直接切进框架里那些需要处理的角落里。
+Help+Manual - 在 Windows 上创建帮助文档用的工具很少，Help+Manual 算一个，虽然它收费，但物有所值。
+HelpNDoc - 不清楚我是不是错过了好东西，可以创建 PDF 和 CHM，对个人用户免费。
+TreeTrim 或 Jeff Atwood 的 CleanSourcesPlus - Jeff 实现并扩展了 Omar 的想法，当你右键单击项目目录的时候，里面什么 bin 啊，obj 啊，debug 啊，都能一扫而光。Jeff 还增加了配置功能来帮你删除 Resharper 目录以及版本控制数据。TreeTrim 是一个功能相似的命令行工具，不过带有插件系统。
+Visual Studio Gallery - 所有的 VS 插件在此聚集！还有优秀的搜索和排名。
+SQL Complete - 给 SQL Server Management Studio 增加智能提示，还是免费的，要是没人爱，就真没天理了。
+FileHelpers - 这个开源库是我知道的最简单的将纯文本数据倒腾进 Excel 或者 SQL Server 中的办法。
+MemProfiler - 这玩意能提供一大堆的信息，我用它修好了好几个隐蔽的内存泄漏。
+HeidiSQL - 小而完整的 MySQL/SQL Server 管理程序。有众多 App 支持。
+LogParser - 这是一个免费的命令行工具，能让你用类似 SQL 查询的方式来分析多种日志文件，并将信息导出到 SQL 表或者 CSV 文件。我用它来分析我自己的日志。
+LogParser 很好，不过 LogParserLizard 做的更好。LogParserLizard 是一个免费的 GUI 版 LogParser。
+Visual Studio 插件
+
+"This one goes to eleven...." - Nigel Tufnel
+Productivity Power Tools - 非常好的 VS 增强插件，几乎涵盖了 VS 下一版本的所有特点，可以查看帮助、时间轴、最近关闭的标签页等等。
+Electric Plum iPhone Mobile Simulator - 一个小巧的 iOS 界面模拟器，写 jQuery Mobile 时节省了我不少时间。
+我也用 opera mobile emulator - 来查看我写的网页在移动平台上的显示效果。
+Web essential - VS 的 Web 调试插件，提供 CSS 编辑，颜色预览，字体预览等等功能，这是一个轻量但强大的插件。VS2013 的 Browser Link 就是从这里毕业的。是的，这个东西我列了两次。
+Code Maid - 深度有效的开源框架清理工具，不仅支持 C# 和 VB，还支持 F#、XAML、CSS 等等。
+OzCode - OzCode 的前身是 BugAid，它将可视化调试的概念上升到了一个新的高度，将循环、表达式、比较阵列都直观的展示出来。目前的 Beta 版本免费。
+NuGet Package Manager - 提供集中管理第三方类库的优秀解决方案，用它可以直接将 PowerShell 用于 Visual Studio。
+VsVim - 喜欢 vim 同时也喜欢 Visual Studio？鱼和熊掌，可以兼得。开源软件。
+StyleCop - StyleCop 可以分析 C# 源代码并进行编码规范检查，可以在 VS 中运行或者和 MSBuild 集成（安装时选择 MSBuild files），个人项目和团队项目都用得上。
+你可以用 StyleCop.MSBuild 将 StyleCop 集成到有 NuGet 的系统内。
+Code Digger (基于 Pex) - 分析代码可能的执行路径，这是普通的单元测试做不到的。
+WiX Toolset - VS2013 自带的打包安装工具越来越难用了，所以可以考虑一下这款开源免费的工具，最近升级后支持 VS2013 了，成熟值得信赖。
+Atomineer - 代码注释工具，支持7种语言，并且可以转化为 Qt、JavaDoc、Doxygen、XML 文档等形式。
+启动器
+
+Scott的小建议：现在我几乎所有设备都是win8.1，所以已经不需要用第三方启动器了，但是我还是要列举一些优秀的启动器，都是我以前用过的，现在介绍给你们。
+
+"Oh, yes, little Bobby Tables, we call him." - http://xkcd.com/327
+Slickrun - 我的最爱，这个小小的浮动输入框简单而高效，可以让我快速启动，加载程序、宏和浏览器。告诉他们，这是我送给你的。
+差不多功能的还有一个叫MagicWords的开源项目（自 2 月 7 日未更新），类似于 SlickRun。
+你是否也想过把一些东西和热键绑定，但是不知道如何分配全局热键？Martin Plante 用 .NET 写出了 SlimKeys 并且努力将它打造为“万能热键管理器”。它可以启动程序，监视文件夹，还有找到文件。如果你有好的想法或者建议请访问 slimCODE 论坛。
+Promptu - 启动器领域的新兴角色。Promptu 的创新功能，包括在不同电脑间同步配置，更是抓住了许多用户的心。
+Humanized Enso - 毫无疑问这是最流畅最有趣的启动器，按下 CapLock 键，Enso 就会弹出，松开则开始执行命令。上手也许需要花一定时间，但是它的 UI 很干净，交互也很清晰，现在人们把 Enso 的功能移植到 firefox 上，唤作 Ubiquity。
+Colibri - 恕我直言，这是 Windows 上最接近 Quicksilver 的东西，虽然打开这个小东西要一点时间，但是运行速度很快。目前它正在积极更新，并且承诺会与很多第三方应用集成。此外，它还支持“便携模式”，方便那些喜欢用 U 盘揣着应用到处跑的人。
+Launchy - 另一个万能应用程序，它默认监听 Alt-Space。如果这个小程序支持动词 + 名词的结构的话，它有望成为另一个 Quicksilver。皮肤很多非常漂亮（有两款 Quicksilver 皮肤！）
+后起之秀
+
+"Great googlely moogley!"" - Johnny Carson
+Carnac - 这个开源的小东西可以在你按下键时在屏幕一角实时显示按下的键位，我在代码演示的时候使用它。
+uTorrent - 虽然我一直叫他 “u-torrent”，不过念成 “micro-torrent” 可能更好些。在需要下载一些合法的种子或者我的 podcast 时，这个算是最好的客户端了，简洁强大，我很喜欢它。
+xplorer2 - 一款像 Norton Commander 一样的资源管理器，比系统自带的好一点，有 32 位和 64 位两种版本，并且支持 Windows 7。
+RescueTime - 你是一个忙人吗？你的时间都花在了有用的事情上了吗？RescueTime 可以帮助你追踪记录你做的事情并且生成详细的报告，让我们 taking care of business 然后 getting things done。
+Total Commander - Windows 上最通用最经典的资源管理器，速度很快，以及 Norton Commander 一样的双面板显示。
+SyncBack - 不得不说 2BrightSpark 这个团队真的很让人喜欢。另外这个软件本身收费，不过有一个免费的 SE 版本。它配置界面干净清爽，我用它来定时同步备份我的家庭网络里的机器。
+Listary - 令人惊艳的一个小工具，综合了启动器和文件管理器的特点，配合你的文件管理器使用，使文件管理和查找变得非常方便，值得下载。
+Tortoise 掌握一切的源力！
+TortoiseHG - Mercurial 的客户端，可以集成在资源管理器里。
+TortoiseSVN - 这是 Subversion 的。
+TortoiseGit - 然后这是 Git 的——如果你需要 GUI 并且喜欢受得了自带的管理器。
+不想把版本控制系统和资源管理器混在一起？那就整合到 Visual Sdudio 里面吧。
+VisualHG - Visual Studio 的 Mercurial 插件。
+AnkhSVN - Visual Studio 的 Subversion 插件，Subversion + Visual Visual Studio = 好极了
+GitSCC - Visual Studio 的 Git 插件，Linuxer 会郁闷，但是我们喜欢。
+EtherPad 已死不过 PiratePad 更好。这个多人在线互动的记事本已经成为我和我的团队进行远程头脑风暴时的首选工具。
+TimeSnapper - 想录下你的桌面吗？哦，TimeSnapper 不是文件的时光机，它是一个记录工具，能让你明白你今天到底干了什么。它可以根据你设定的时间间隔来录制截屏，当作一天的工作日志。
+IcoFx - 只是因为 Windows 上实在没有更好的图标编辑工具了，它是最先进最好用的，虽然……很贵。
+Greenfish Icon Editor - 这是一个很好的开源图标编辑器的小型便携版。
+Jing - Jing 是一个小而美的截屏软件。支持截屏和录制并分享，上手很容易，并且提供一个免费的 screencast 帐号用于上传视频。因为其独特的优点我一直在使用它。
+Chameleon Window Manager - 老实说 NeoSoft 所有的产品都不错，但是这个窗口管理器尤其强大，让你完全控制窗口的大小布局走向等等。
+WinSnap 和 Window Clippings - 我曾经在两个优秀的截屏工具间左右为难，WinSnap 设置选项很丰富（默认设置也不错），而且还可以截下圆角和透明背景，当然 Window Clippings 也一样能做到。这两个软件都无需安装，都提供 32 位和 64 位两种版本。WinSnap 支持 Windows 7 任务栏增强，而 Windows Clippings 则有不错的插件模型。我几乎天天用到 Windows Clippings，WinSnap 一周也用好几次，在这两个之间选择一个真的很艰难。所以这两个软件都值得你去下载，Window Clippings 只有 18 美元，真心不贵。
+Shotty - Shotty 是另一个不错的截屏小工具，操作流程简单，而且也支持透明 PNG 显示和截取玻璃效果。
+BabySmash! - 好吧我悄悄的说这其实不是一个工具……如果你有小孩，你想在写代码的时候仍然逗他开心，试试看吧。
+GBridge - 我曾经把 Hamachi 当作私人 VPN，利用我的私人网络登录到多台设备，但我最近开始喜欢 GBridge。它通过 Gtalk 来提供 VPN，VNC 和安全的文件共享。很神奇吧。
+DarkRoom - 当我想抛开一切专心思考时，我就需要一个干净的桌面和一个黑暗的工作室。这个文本编辑器就做到了这一点，让我能专注思考，我也用它做报告。
+Foxit Reader for Windows - 小巧而且速度特别快，更新至 3.1 后比以前更加出色。绿色免安装，有了它，Acrobat，再见。
+StudioStyl.es - 这个在线工具会实时动态生成一个 Visual Studio 的配色主题文件给你，当然你也可以下载离线版然后为自己量身打造一个主题。
+Virtual TI-89 (Emulator) - 我上大学时发现 CALC.EXE 有时候会不好用，我希望 Windows 上能有一个真正的计算器，所以就做了这个 TI-89 模拟器。我是不是很 Nerd 呢？嘿嘿。
+Visual Studio Wallpapers - 有了这个一起共享 Visual Studio 壁纸来美化自己的桌面的网站，你还等什么呢？
+VLC Media Player - 如果你只是想看视频的话，它比其他所有播放器都要适合。
+foobar2000 - Windows 上一个非常有效的免费音乐播放器。
+FAR File Manager - Norton Commander 又回来了，依旧是命令行，依旧是飞快。有趣的是它的作者是 RAR 格式的发明人。可以和 ConEmu 有效集成。
+Skype - VoiP 网络电话：比 POTS 音质更好，免费，支持多人通话，快来注册吧。
+DOSBox - 当你用惯了超强的 64 位 Win7 旗舰版时，有时候需要运行一些老程序却没有 DOS 了。DOSBox 是一个 DOS 模拟器，有了它你可以在一台 2009 年的 Win7 机器上玩 1988 年的 Bard's Tale。
+Cygwin - 对于那些 Unix 爱好者它可以在 Windows 中为你提供 Unix 环境，当然或许它的价值更多的在那一堆命令行工具上。这是一套很大的系统，也许大的过头了，不过依旧很受欢迎，也很实用。
+SketchFlow 或 Balsamiq - 所有优秀设计都起源于一张草图，但是肯定不是用铅笔和纸来画草图啦，用 UX（User Experience）草图工具来决定你的设计应该有个什么外观及应该实现什么功能吧。
+此外，用于界面设计的 Pencil 和用于交互设计的 IxEdit（无需 JavaScript 脚本）也值得一看。
+FinePrint - 虚拟打印机，让你可以在打印之前看到效果，节省纸张，而且还可以给几乎所有软件提供打印预览，我很喜欢它。
+Fraps - DirectX 视频录制，用于全屏录制 DirectX 或者 OpenGL 画面。
+Tor Anonymous Browsing - 这个工具可以让你在网络上隐藏身份，在出差时格外有用。
+底层工具
+
+"If you know how to use Process Monitor competently, people of both sexes will immediately find you more attractive." - Scott Hanselman
+Ultimate Boot CD 和 Ultimate Boot CD for Windows - 这些光盘是程序员修电脑时的必备工具，毕竟你可没那么多钱给给每个电脑坏掉的亲戚买新机，不是么？
+Hiren's BootCD - 更先进也更复杂，Hiren's BootCD 可以拯救那些被 rootkit 等强力病毒摧残的电脑。
+Darik's Boot and Nuke - 使用它你清除电脑就不需要用铝热剂了。
+WinToBootic - 不好看，但好用，可以创建可以启动的 Windows 介质。
+BlueScreenView - 如果你有一个蓝屏 dump，你是否想知道到底发生了什么呢？BlueScreenView 可以告诉你真相。
+SysInternals - 尽管其中的 Process Explorer 和 AutoRuns 名气更大，不过我认为 Mark 和 Bryce 所作的这些软件都是精品。Process Explorer 能看得比任务管理器更透彻，而且提供了「Find DLL」这个极其有用的功能，此外还可以高亮出 .NET 进程。Autoruns 则可以抓出所有随机器启动的程序。
+SysInternals 家族的新晋成员，Process Monitor，足够让 Filemon 和 Regmon 羞愧。它可以彻查你的程序的所作所为，是程序员的不二之选。
+SoX Sound eXchange - 我经常要摆弄音频文件，SoX 是我的瑞士军刀。
+GSpot - 如果你真的对视频编码感兴趣，GSpot 能告诉你的信息甚至比你想象的还要多。
+Bart's Preinstalled Enviroment (BartPE) - 想从光盘启动然后扒些数据？还想要网络？这个启动盘可以节省你很多时间。不过很可惜它有一段时间没更新了，不过我还是留着它。
+DllFiles - 天知道哪天你就会满世界找一个老的 DLL。
+PInvoke.NET - 当你想从托管代码里调用系统 API，至少得知道怎么正确写导入语句，不是么？
+HandBrake - 转码工具已经够多了，不过我还是选择 HandBrake。它能烧光我的 8 个 CPU。
+cURL - 请将它丢进 PATH 里，因为你很可能会从命令行里访问网络，而且用过一次之后，你就再也离不开它了。
+Snoop - 它可以实时调试 WPF 程序。这个是什么？那个又是什么？用 Snoop 就能看到。
+InspectExe - 探索和分析 Win32 应用程序，可以列出导入表、显示资源，等等。
+DVDDecrypter 等 - 给希望备份 DVD 的人准备的东西。
+PSPVideo9 - 为 PSP 用家准备的，它们可以将视频转换为 PSP 可以播放的 MP4 格式。
+WireShark - 以前叫 Ethereal，现在是 Wireshark。它的强大远超想象，不过我用...
+... Microsoft Network Monitor 3.3 - 更多些。3.x 版本改进相当大，将之前的缺陷都改进了不少。我使用它非常方便。
+Bitvise Tunnelier SSH Client - 许多人使用 Putty 来远程管理服务器，不过略显麻烦。Bitview Tunnelier 则要方便的多。
+Top 125 Network Security Tools - 这张表里列出的安全工具都很有用。
+网站与书签
+
+"So why is “Shut down” on the Start menu? When we asked people to shut down their computers, they clicked the Start button. Because, after all, when you want to shut down, you have to start somewhere." - Raymond Chen
+ExplainShell.com - 可以解释一条巨长无比的 Unix 命令究竟是干什么的。甚赞。
+JSFiddle - 想去实验小段的 JavaScript 吗？不用打开编辑器、IDE 或者 Firebug，用 JSFiddle 就行了，它可以同时显示 HTML、CSS、JavaScript 还有最后的网页，也支持多种框架。除此之外，还可以将结果共享他人。
+CSSDeck - 同样是 HTML、CSS 和 JavaScript 组合得到的绚丽效果。从这里学到的 CSS 知识要多过所有书。
+Responsinator - 快速了解你的网站在手机里看起来是什么样子。
+Bit.ly - 不仅仅缩短网址，它还拥有优秀的拥有统计和实时跟踪功能。在 URL 后面加上一个 + 号就能看到大量的统计数据。
+Markup.io - 想要在网页上做笔记吗？不用下 app 了。用这个神奇的网站就行了，就像这样。
+BrowserShots - 你的网站在 IE4、Opera 9.64 下究竟是什么样子呢？答案在这里就能知道。
+Visibone HTML/JavaScript Reference - 除了纸质参考卡片，他们还直接在网站里提供免费的 HTML 参考卡与颜色卡，这也是我认为它值得留在书签栏里的原因。
+StackOverflow - 有问必答。
+SQL Designer - 支持导入 SQL 的网页版 SQL Entity 关系设计器。
+BrowserStack.com - 像 VNC 那样连接任何系统上的任何浏览器，哪怕再罕见，然后测试你的网站。
+ViewPure - 观看 Youtube 视频，没有广告等一堆杂碎。就像 Readability 之于文字网页。
+Design - 点一下书签栏就能使用网格、标尺、十字参考等设计工具。
+Del.icio.us - 大名鼎鼎的美味书签不用再介绍了吧。他们的 Bookmarklets 简直像是魔力一样把我吸住。它可以存下我的书签，这样不论我在哪里送都可以拿出来继续阅读。非常方便和简洁。我都用它好多年了。
+别忘了 Del.icio.us IE Buttons 和浏览器插件。
+Kuler - 为准设计师准备的配色网站。
+Color Scheme Designer - 我不是设计师，我也不懂潮流，但是我至少知道我的喜好。这个网站就非常适合给你的下一个大项目准备配色。
+smtp4dev - 编写 App 的时候经常需要发送邮件和通知，而拥有一个小的 SMTP 服务器会大大有助于开发。
+HTML5 Boilerplate - 千里之行，始于足下，这个 HTML5 模板是你制作杀手级网站的第一步。
+TypeTester - 对比网络字体的绝好去处。
+What the Font? - 这个网站可以识别出照片里的字体，通常很准确。
+32 Bookmarklets for Web Designers - 在被 CSS 整到焦头烂额的时候他们是你面前的一丝光明。
+http://www.downforeveryoneorjustme.com/ - 到底是网站挂了还是你人品不好？一判就明。
+QuirksMode - 超过 150 页详尽的 CSS 与 JavaScript 文档，能把我的头给塞爆。
+BuiltWith - 想知道那些牛站背后的技术吗？
+Google 地图 加 HousingMaps.com - Google 地图很酷，而 Paul Rademacher 的 HousingMaps.com 则锦上添花。它也许是第一个我所知道的，Web 2.0 大杂烩中的网站。我一直留着它，提醒我一个简单的想法最后做出来的东西有多么伟大。
+ProxySwitcher - 总是不停在换代理？有了它你换代理就比换衣服还快。
+YouGetSignal - 优秀的在线网路工具集合。
+XRay - 这个 Bookmarklet 可以让你看到任何元素的 CSS 属性。
+The Morning Brew - .NET 程序员的每日必读，可以让你了解业界的最新进展。
+PortableApps.com - 把你最喜欢的应用塞进 U 盘里。别忘了 PStart，很好用的 PortableApps 应用启动器。
+还有更多免安装应用在 http://portablefreeware.com/。
+JSLint - 正如其名，它是一个 JavaScript 的“Lint”，可以告诉你到底你的代码哪里出问题了。
+JSHint 是它的改进版。
+博主和读者用物
+
+"You can do anything, but not everything." - David Allen
+Google Reader 已经不在了，有些人认为这标志着 RSS 阅读器也正在慢慢地走向死亡，但我觉得还是有很多的替代品的。比如：
+Feedly - Feedly 在这些RSS阅读器中算是最漂亮最优美的一个，移动端体验很好，网页端速度很快。
+NewsBlur - 尽管开发者只有一个人，但是它非常快，而且跨平台支持很好，并且网页端更新很及时。
+The Old Reader - 这是最忠于原版 Google Reader 的阅读器。如果你只是想要用回 Google Reader，这是你最好的选择。
+现在还有不少人使用 Windows 客户端阅读，比如以下几款：
+FeedDemon - 我最喜欢的阅读器，始终是最新潮的，并且一直免费，重要的是可以与 Google Reader 同步。
+RSSBandit - 用 .net 编写的，免费，开源，而且支持与很多阅读器同步（包括已故的 Google Reader），而且我最近听说作者又要重新开始更新它。
+PNGGauntlet 和 PNGOut - 如果你要用 PNG 图片，一定要先压缩再上传，这一点对在乎读者阅读体验的博主们来说非常重要。
+InstaPaper - InstaPaper 和它的“稍后读”功能对每天要处理大量信息的读者来说是非常有必要的。我每天都用这个软件，随时随地在任何设备上阅读。
+FeedValidator - 如果你的 RSS/Atom 源没有通过 FeedValidator 测试，那它就是垃圾。
+IFTTT (IfThisThenThat) - 一个社交网络的工作流程管理器，可以让你把任意两个网站上做的两个事件联系起来。目前我在社交网络上做什么都离不开 IFTTT。
+OneNote，开启云同步并配合 iOS 版 OneNote - 最近 ios 版 OneNote 发布后我就不用 EverNote 而彻底转移到 OneNote 了，这意味着我可以通过 OneNote 同步我所有的办公软件然后推送到我的 iPhone。在没有安装 OneNote 的机器上我还可以通过 http://docs.live.com 编辑我的云笔记。
+Evernote 和 RememberTheMilk - 这两个 App 可以方便地跨平台管理笔记和待办事件，EverNote 支持在 Mac，Windows，iphone，Palm Pre，Windows Mobile 以及黑莓等平台之间云端同步管理笔记，RememberTheMilk 则可以让你通过你喜欢的任何渠道管理待办事件，比如通过谷歌日历，推特，黑莓或者书签。
+Windows Live Writer - 终极离线博客发布工具。不满意的话可以改用它的 SDK 改进它。
+Amazon Quick Link - 如果你写博客，你就会阅读，如果你阅读，你就会读到很多书，如果同时你写博客、阅读、看书，你就会想把自己读的书写到博客上，而这一切都需要一个亚马逊链接。这个 Windows Live Writer 插件可以方便地在你的博客文章里面加入亚马逊链接。
+PreCode Plugin 和 SyntaxHighligher - 如果你是个程序员并且在博客上面贴代码，不妨尝试一下这个插件，它们自带的 JavaScript 效果能让你的代码大放异彩。
+CallBurner - 如果你写博客，可能还会同时拥有一个 Podcast。CallBurner 是一个很好的软件，用于记录你的 Skype 通话，设置选项很齐全，支持导出双声道的MP3文件，和通话双方各自的 WAV 文件。用它们家的另一款软件 versionVodBurner 还可以录视频通话。
+Chrome 扩展和插件
+
+"Tomorrow is 11/11/11, not 11/11/11. Bloody Americans" - Laurentme0w
+AdBlock for Chrome - 效果和广告里的一样赞。
+Postman for Chrome - 最好的 REST 客户端。
+KnockoutJS context debugger for Chrome - 洞悉每个 Knockout 对象的真正含义。
+AngularJS Batarang - 让 Chrome 理解 AngularJS。
+XmlTree - 在 Chrome 上美观显示 XML。
+Web Developer for Chrome - 炸裂！你们最爱的火狐工具栏现在 Chrome 也有了！
+SpeedTracer - 速度速度速度，这是所有的时间线和倒计时。
+Web Developer Checklist - 来自 http://webdevchecklist.com，看看你发布网站的时候是不是忘记了些应该做的事情？
+JSONView for Chrome - 让你在 Chrome 里查看 JSON 的时候能够更轻松。
+Windows 忘记的功能
+
+"I didn't know anything about this. So I called up some folks at Microsoft, and apparently we make a lot of different image editors." - Steve Balmer
+Ditto - Windows 剪贴板的增强神器。和各种剪贴板格式都能和谐相处。
+ClipX - “ClipX is a tiny clipboard history manager. It is sweet, it is free, use it.”
+Cmder 和 ConEmu - 我寻找 Windows 上更好的命令行已经很久了，我认为整合 ConEmu 的 Cmder 发行包 离完美已经很近了。强力推荐。
+注意，Cmder 包含 ConEmu 和 Clink，后者将 Bash 式的行编辑移植到了 CMD 上。
+ImgBurn - 好罢，Windows 7 已经内置了刻盘工具，不过呢，ImgBurn 是所有类似工具里，界面清晰度与信息完备度里平衡的最好的，毕竟我想在刻盘的时候知道到底发生了些什么，此时用 ImgBurn 正合适。别看他们的网站土，酒香不怕巷子深，不是吗？
+WiFi Manager command line - 连上 WiFi 很容易，不过在 Windows 里要忘记那些自动连接的热点就有点麻烦了。有了这个命令行工具，事情就能方便的多。
+VoidTools Everything Search Engine - 有时候你只是想要一个文本框，然后一个小程序驱动它搜索你电脑上的一切。这个小工具非常简单，但它能以闪电般的速度搜索硬盘上的一切（无误）。对啊，你用 Google 或者 Bing 能够在几秒钟内搜遍网络，为什么在硬盘上却不行了呢？它可以在几乎所有 Windows 上工作，甚至包括 Windows 2000。
+SoundSwitcher - 你也许会有许多音频设备，比如耳机和蓝牙播放器，要切换用哪个播放就显得很麻烦了。现在 SoundSwitcher 让你用一个快捷键切换声音设备。
+Recuva - 有了它你就不会因为误删照片而后悔了。
+PureText - 想让粘贴文字的时候更舒服吗？试试它吧。它可以去掉剪贴板里的文字格式，节省出一大堆的宝贵时间。感想 Steve Miller 给我们奉献了这样一个好东西。
+Paint.NET - 这绝对是 Windows 组应当塞进他们产品里的东西。基于 .NET 构建。
+DoPDF - 想要用一个虚拟打印机输出 PDF？选它。
+Wim2VHD - 那群人居然把这么有用的东西给藏在 MSDN 里，简直不能忍。如果你要创建可以直接 boot 的虚拟机镜像，选它没错的。
+TrueCrypt - 它可以加密文件或者整个分区，这样如果你的 U 盘不幸落入坏人手中你也不必担心数据泄漏。速速搞起吧，它是免费的。
+BareGrep 和 BareTail - 说实话这两样东西可以大大节省你的时间，这两样东西——tail -f 和 grep 绝对应该内置到 Windows 里。那群产品经理应该剖腹自杀。你知道它们有多有用吗？如果你有一个写日志文件的程序，你想看那些日志，你就需要 BareTail，它还可以高亮关键字。而搜索文件内容，肯定也是日常必需品。这两样东西已经很久没更新了，不过到今天依旧工作良好。
+LockHunter - 想删文件却发现被打开了，而 Windows 没告诉你是谁打开了它们？LockHunter 能告诉你。
+PassPack 或 KeePass - 如果你注册了一堆网站，有一堆密码的话，就用这个软件来管理好了。PassPack 依赖在线服务，而 KeePass 则是离线的。KeePass 是免费开源的软件，非常干净，非常强大。
+我最近换用了 1Password，它自带同步机能，在哪里都能使用。
+TreeSize Free - 它也许是我最近使用最多的新应用了吧，堪称文件占用分析领域的佼佼者。收费的专业版分析会更加透彻。
+DiskView - DiskView 是我发现的最强大的磁盘占用分析器，和资源管理器整合良好，还兼有 SMART 查看功能。
+SequoiaView - 可视化占用分析的先行者。
+WinDirStat - 图形化的磁盘分析工具很多了，这款很对我的胃口，而且它不需要安装就能使用。
+OverDisk - 这玩意很久没更新了，不过仍然值得一看。它将磁盘占用画成饼图。尽管画好要等很久——真的很久。
+Prish Image Resizer - 听着，使用它你就能右键图片然后调整大小，兄弟。我老婆非常喜欢它。可靠、迅速。为什么 Windows 没有内置它？
+注意：点那个小的链接，免得惹上一堆广告。
+Synergy - 虚拟 KVM，在你桌子上的电脑之间共享鼠标键盘，尽管他们可能安装了不同的操作系统。开源软件。
+BgInfo from SysInternals - 当你每次 3389 别的机器的时候会不会想知道——自己到底去了哪里呢？这个软件可以将那些有用的信息画在壁纸上，比如 IP、机器名、磁盘占用等等，而且完全可定制。
+SmartFtp - 也许众口难调，不过我认为最好的 FTP 软件是这个，而且原生 64 位版本让我给他一个好赞。在 Windows 8.1 中工作良好。
+SharpKeys - 想把 Caps 改成 Esc 吗？或者想把右 Ctrl 改成 Win 键吗？我很想，但是为什么我在控制面板里做不到？因为那群产品经理把这事给忘了——幸亏 Randy 没有，于是就有了 SharpKeys 这个改键工具。
+PC De-Crapifier - 你花 3000 买的电脑里捆绑了价值 30000 的垃圾软件？用 De-Crapifier 将他们删光吧！
+Magical Jelly Bean KeyFinder - 忘记序列号了？用它找回来。
+KatMouse - 想要滚动其他窗口里的内容？用 KatMouse 就不用先敲对方窗口了。
+Bulk Rename Utility - 这是非常强大的 GUI 工具，能用各种模式来批量重命名。无价之宝。
+PSTools from SysInternals - 所有没内置的命令都在这里：kill、loggedon、remote exec、shutdown、getsid，等等。
+Terminals - 开源且更新活跃的远程桌面工具，多 Tab 界面。
+RoyalTS - 如果你整天的工作就是和各种远程机器打交道的话，试试 RoyalTS 吧。它可以看成远程终端的 Outlook——可能这个比喻还不足以形容它带给我的震撼。
+TouchCursor - 如果你经常要移动光标但是又不想挪手怎办？为什么不把 IJKL 变成方向键呢？我不清楚这个软件是否真的值 20 刀，但是效果和宣传的一样好。
+Synchronex - 文件同步器，而且除了本地文件，它还能同步 UNC、FTP、SFTP、WebDAV、ZIP，还支持版本管理。价格只有 20 美元。我用它来定时备份我的拨空呃。这玩意的脚本很难懂，比 SyncBack SE 的更复杂，但是一旦你设定完成它就如你所愿地工作。

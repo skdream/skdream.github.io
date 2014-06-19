@@ -1,0 +1,43 @@
+menu:
+  Home: /
+  Archives: archives
+  page:
+    About: about
+
+excerpt_link: Continue →
+
+mathjax: true
+fancybox: true
+
+social:
+  twitter: true
+  github: true
+  rss: true
+
+twitter:
+  username: skdream
+
+github:
+  username: skdream
+
+addit:
+  facebook: false
+  twitter: true
+  gplus: true
+  pinit: false
+  publid:
+  
+  
+  #### Analytics
+google_analytics:
+  enable: false
+  id:   ## e.g. UA-1766729-8 your google analytics ID.
+  site: ## e.g. yangjian.me your google analytics site or set the value as auto.
+## You MUST upgrade to Universal Analytics first!
+## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN
+
+#### Custom Search
+google_cse: 
+  enable: false
+  cx:  ## e.g. 000561263943549425496:mrzrm0gr4kg your Custom Search ID.
+## https://www.google.com/cse/
