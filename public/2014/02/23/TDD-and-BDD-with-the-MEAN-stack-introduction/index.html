@@ -1,341 +1,170 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   
-    <title>用TDD和BDD来测试MEAN的介绍 | skdream&#39;s blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="skdream">
-    
-    <meta name="description" content="原文 http://attackofzach.com/tdd-bdd-mean-part1/
+  <title>用TDD和BDD来测试MEAN的介绍 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="原文 http://attackofzach.com/tdd-bdd-mean-part1/
 随着MEAN stack越来越多的被使用，出现了大量的测试MEAN方面的策略。随着我深入研究服务器端和浏览器端的自动化测试MEAN stack的方案,我发现很难找到一些关于如何搭建支持mockist sty">
-    
-    
-    
-    
-    <link rel="alternative" href="/atom.xml" title="skdream&#39;s blog" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="用TDD和BDD来测试MEAN的介绍"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
 </head>
 
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="skdream&#39;s blog" title="skdream&#39;s blog"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="skdream&#39;s blog">skdream&#39;s blog</a></h1>
-				<h2 class="blog-motto">if you never try you will never know</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-    </header>
-    <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
-	<article itemprop="articleBody"> 
-		<header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/02/23/TDD-and-BDD-with-the-MEAN-stack-introduction/" title="用TDD和BDD来测试MEAN的介绍" itemprop="url">用TDD和BDD来测试MEAN的介绍</a>
+
+<body>
+<div id="page" class="site">
+  <div id="primary" class="content-area">
+
+    <header id="header" class="inner"><div class="site-branding">
+  <h1 class="site-title">
+    <a href="/">Hexo</a>
   </h1>
-  <p class="article-author">By
+  <p class="site-description"></p>
+</div>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+  <ul>
     
-      <a href="http://yoursite.com" title="skdream">skdream</a>
-    </p>
-  <p class="article-time">
-    <time datetime="2014-02-23T02:42:27.000Z" itemprop="datePublished">2月 23 2014</time>
-    更新日期:<time datetime="2014-02-23T11:31:27.000Z" itemprop="dateModified">2月 23 2014</time>
+      <li><a href="/">Home</a></li>
     
-  </p>
-</header>
-	<div class="article-content">
-		
-		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-		</div>
-		
-		<p>原文 <a href="http://attackofzach.com/tdd-bdd-mean-part1/" target="_blank">http://attackofzach.com/tdd-bdd-mean-part1/</a></p>
-<p>随着<a href="http://thecodebarbarian.wordpress.com/2013/04/29/easy-web-prototyping-with-mongodb-and-nodejs/" target="_blank">MEAN stack</a>越来越多的被使用，出现了大量的测试MEAN方面的策略。随着我深入研究服务器端和浏览器端的自动化测试MEAN stack的方案,我发现很难找到一些关于如何搭建支持<a href="http://martinfowler.com/articles/mocksArentStubs.html#ClassicalAndMockistTesting" target="_blank">mockist style</a>的测试驱动的环境的资料或建议。许多作者提供了一些轻量级的建议，但那些建议往往是过去的一些解决方案。我希望能制定一个满足如下条件的工具</p>
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+</nav></header>
+
+    <main id="main" class="site-main posts-loop" role="main">
+      <article class="post article">
+
+  
+  
+    <h3 class="article-title"><span>用TDD和BDD来测试MEAN的介绍</span></h3>
+  
+
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2014/02/23/TDD-and-BDD-with-the-MEAN-stack-introduction/" rel="bookmark">
+        <time class="entry-date published" datetime="2014-02-23T02:42:27.000Z">
+          2014-02-23
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>原文 <a href="http://attackofzach.com/tdd-bdd-mean-part1/" target="_blank" rel="external">http://attackofzach.com/tdd-bdd-mean-part1/</a></p>
+<p>随着<a href="http://thecodebarbarian.wordpress.com/2013/04/29/easy-web-prototyping-with-mongodb-and-nodejs/" target="_blank" rel="external">MEAN stack</a>越来越多的被使用，出现了大量的测试MEAN方面的策略。随着我深入研究服务器端和浏览器端的自动化测试MEAN stack的方案,我发现很难找到一些关于如何搭建支持<a href="http://martinfowler.com/articles/mocksArentStubs.html#ClassicalAndMockistTesting" target="_blank" rel="external">mockist style</a>的测试驱动的环境的资料或建议。许多作者提供了一些轻量级的建议，但那些建议往往是过去的一些解决方案。我希望能制定一个满足如下条件的工具</p>
 <ul>
 <li>自动化</li>
 <li>mocklist 单元测试</li>
 <li>BDD/ATDD 测试</li>
 <li>End-To-End系统的测试</li>
 </ul>
-<p>如果你想研究这技术的实现代码，我建了个<a href="https://github.com/zpratt/thoughtsom" target="_blank">github项目</a>来描述这种技术。</p>
-<p>下面我假设你已经了解MongoDB和nodejs。如果你不了解，可以查看下 <a href="https://github.com/cmoudy/mean-vagrant" target="_blank">a vagrant solution</a>和 <a href="http://www.mean.io/" target="_blank">mean.io</a>。</p>
+<p>如果你想研究这技术的实现代码，我建了个<a href="https://github.com/zpratt/thoughtsom" target="_blank" rel="external">github项目</a>来描述这种技术。</p>
+<p>下面我假设你已经了解MongoDB和nodejs。如果你不了解，可以查看下 <a href="https://github.com/cmoudy/mean-vagrant" target="_blank" rel="external">a vagrant solution</a>和 <a href="http://www.mean.io/" target="_blank" rel="external">mean.io</a>。</p>
 <p>我的目标之一是尝试找到既能在服务器端也能在浏览器端都能工作的工具。同时我也花了很多精力来研究自动化，因此我的目标是避免人工打开浏览器来执行测试。事实证明这个目标是充满挑战的。xUnit-side的测试和BDD-side的测试的目标是类似的。但是我们的要坚持以前的目标。</p>
 <p>让我来介绍下能在前端和后端都工作的很好的工具：</p>
 <ul>
-<li><a href="http://gruntjs.com/" target="_blank">Grunt</a> - 任务管理</li>
-<li><a href="http://visionmedia.github.io/mocha/" target="_blank">Mocha</a> - 测试框架</li>
-<li><a href="http://chaijs.com/" target="_blank">Chai</a> - 断言库</li>
-<li><a href="http://sinonjs.org/" target="_blank">Sinon</a> - 替代，模拟的瑞士军刀</li>
+<li><a href="http://gruntjs.com/" target="_blank" rel="external">Grunt</a> - 任务管理</li>
+<li><a href="http://visionmedia.github.io/mocha/" target="_blank" rel="external">Mocha</a> - 测试框架</li>
+<li><a href="http://chaijs.com/" target="_blank" rel="external">Chai</a> - 断言库</li>
+<li><a href="http://sinonjs.org/" target="_blank" rel="external">Sinon</a> - 替代，模拟的瑞士军刀</li>
 </ul>
 <p>一些工具要通过一些处理才能在服务器端和浏览器端工作</p>
 <ul>
-<li><a href="https://github.com/acuminous/yadda" target="_blank">Yadda</a> - BDD方面与Mocha和Chai工作的很好(在浏览器端使用需要做些小处理，<a href="https://github.com/zpratt/yadda-karma-example" target="_blank">我现在在做这方面的工作</a>)</li>
-<li><a href="https://github.com/cucumber/cucumber-js" target="_blank">Cucumber-js</a> - (BDD) 在服务器端工作的很好，但在浏览器端不能工作（主要是缺少karma方面的支持）</li>
+<li><a href="https://github.com/acuminous/yadda" target="_blank" rel="external">Yadda</a> - BDD方面与Mocha和Chai工作的很好(在浏览器端使用需要做些小处理，<a href="https://github.com/zpratt/yadda-karma-example" target="_blank" rel="external">我现在在做这方面的工作</a>)</li>
+<li><a href="https://github.com/cucumber/cucumber-js" target="_blank" rel="external">Cucumber-js</a> - (BDD) 在服务器端工作的很好，但在浏览器端不能工作（主要是缺少karma方面的支持）</li>
 </ul>
 <p>最后，一些只能在一端工作的好的：</p>
 <ul>
-<li><a href="http://karma-runner.github.io/" target="_blank">Karma</a> - 在浏览器端运行的测试工具</li>
-<li><a href="https://github.com/cjohansen/karma-browserifast" target="_blank">karma-browserifast</a> - Karma的浏览器插件，在浏览器中自动的运行Yadda BDD测试时需要它</li>
-<li><a href="https://github.com/visionmedia/supertest" target="_blank">Supertest</a> - 一个了不起的测试基于Express（nodejs框架） REST风格的工具</li>
-<li><a href="http://casperjs.org/" target="_blank">CasperJS</a> - 测试用户UI交互(能和Yadda一起工作) </li>
+<li><a href="http://karma-runner.github.io/" target="_blank" rel="external">Karma</a> - 在浏览器端运行的测试工具</li>
+<li><a href="https://github.com/cjohansen/karma-browserifast" target="_blank" rel="external">karma-browserifast</a> - Karma的浏览器插件，在浏览器中自动的运行Yadda BDD测试时需要它</li>
+<li><a href="https://github.com/visionmedia/supertest" target="_blank" rel="external">Supertest</a> - 一个了不起的测试基于Express（nodejs框架） REST风格的工具</li>
+<li><a href="http://casperjs.org/" target="_blank" rel="external">CasperJS</a> - 测试用户UI交互(能和Yadda一起工作) </li>
 </ul>
-<p>下面会有更多。我计划写至少两篇文章来详细的描述什么是在服务器和浏览器端的测试驱动。目前可以看下我的浏览器端的BDD风格的单元测试的例子,<a href="https://github.com/zpratt/yadda-karma-example" target="_blank">Github上的Yadda/Karma</a>，以及服务器端BDD风格的单元测试的例子,<a href="https://github.com/zpratt/thoughtsom" target="_blank">thoughtsom</a>。我计划在写下篇文章之前写更多的浏览器端测试的代码示例。同时，欢迎大家与我交流。</p>
-<p>P.S 我了解<a href="https://github.com/angular/protractor" target="_blank">Protractor</a>,但我还没有机会去玩一下它。     </p>
-  
-	</div>
-		<footer class="article-footer clearfix">
+<p>下面会有更多。我计划写至少两篇文章来详细的描述什么是在服务器和浏览器端的测试驱动。目前可以看下我的浏览器端的BDD风格的单元测试的例子,<a href="https://github.com/zpratt/yadda-karma-example" target="_blank" rel="external">Github上的Yadda/Karma</a>，以及服务器端BDD风格的单元测试的例子,<a href="https://github.com/zpratt/thoughtsom" target="_blank" rel="external">thoughtsom</a>。我计划在写下篇文章之前写更多的浏览器端测试的代码示例。同时，欢迎大家与我交流。</p>
+<p>P.S 我了解<a href="https://github.com/angular/protractor" target="_blank" rel="external">Protractor</a>,但我还没有机会去玩一下它。     </p>
 
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/test/">test</a>
-  </div>
-
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://yoursite.com/2014/02/23/TDD-and-BDD-with-the-MEAN-stack-introduction/" data-title="用TDD和BDD来测试MEAN的介绍 | skdream&#39;s blog" data-tsina="null" class="share clearfix">
-  </div>
-
-</div>
-</footer>   	       
-	</article>
-	
-<nav class="article-nav clearfix">
- 
-
-<div class="next">
-<a href="/2014/02/13/2014-software-recommend/"  title="Scott Hanselman 的 2014 年软件推荐（授权翻译）">
- <strong>NEXT:</strong><br/> 
- <span>Scott Hanselman 的 2014 年软件推荐（授权翻译）
-</span>
-</a>
-</div>
-
-</nav>
-
-	
-</div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
-  
-  </div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">标签</p>
-		<ul class="clearfix">
-		
-			<li><a href="/tags/regexp/" title="regexp">regexp<sup>1</sup></a></li>
-		
-			<li><a href="/tags/test/" title="test">test<sup>1</sup></a></li>
-		
-			<li><a href="/tags/软件推荐/" title="软件推荐">软件推荐<sup>1</sup></a></li>
-		
-		</ul>
-</div>
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
-</div>
-
-  <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
-    <ul>
-      <li><a href="//iamjoel.github.io" target="_blank" title="joel's blog">joel's blog</a></li>
-    </ul>
-</div>
-
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/awcool" target="_blank" title="weibo"></a>
-		
-		
-		
-		<a href="https://github.com/skdream" target="_blank" title="github"></a>
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
-		
-		<a href="http://yoursite.com" target="_blank" title="skdream">skdream</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
       
-      $('#toc.toc-aside').css('display', 'none');
+    </div>
+    <footer class="article-footer">
+        <div class="article-meta pull-left">
+          
+          
+  
+
+  <span class="post-tags">
+    <i class="icon-tags"></i>
+    <a href="/tags/test/">test</a>
+  </span>
+
+
+        </div>
         
-    }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
-});
-</script>
+    </footer>
+  </div>
+</article>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var ai = $('.article-content>iframe'),
-      ae = $('.article-content>embed'),
-      t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
-      ta = $('#toc.toc-aside'),
-      o  = $('.openaside'),
-      c  = $('.closeaside');
-  if(ai.length>0){
-    ai.wrap('<div class="video-container" />');
-  };
-  if(ae.length>0){
-   ae.wrap('<div class="video-container" />');
-  };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
-});
-</script>
-
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
-  var html = [
-  '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-  $('.article-share-qrcode').click(function(){
-    var imgSrc = $('#qrcode-pic').attr('data-src');
-    $('#qrcode-pic').attr('src', imgSrc);
-    $('#qrcode-pic').load(function(){
-        $('.qrcode strong').text(' ');
-    });
-  });
-});     
-</script>
+  
+	<div id="comment">
+	
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2014/02/23/TDD-and-BDD-with-the-MEAN-stack-introduction/" data-title="用TDD和BDD来测试MEAN的介绍" data-url="http://donodejs.com/2014/02/23/TDD-and-BDD-with-the-MEAN-stack-introduction/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"skdream"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
 
 
 
 
+    </main>
 
-
-  </body>
+    <footer id="colophon" class="site-footer" role="contentinfo"><p class="site-info">
+  Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+  Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+  </br>
+  
+  &copy; 2016 John Doe
+  
+</p>
+</footer>
+    
+  </div>
+</div>
+</body>
 </html>
